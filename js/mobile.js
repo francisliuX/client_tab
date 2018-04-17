@@ -1,4 +1,4 @@
-//��ʾ�˵�
+
 function show_menu() {
 	var bd_top = $(document).scrollTop();
 	if($('#menu').css('display')=='none') {
