@@ -8,11 +8,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-<title>西安程鸿电子  </title>
+<title>店家</title>
 
 
-
-
+    <link rel="stylesheet" href="css/category_list.css">
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link rel="alternate" type="application/rss+xml" title="RSS|西安程鸿电子  " href="" />
@@ -851,19 +850,54 @@ panda(function () {
           <li><a href=""><span class="menu1"></span><i>首页</i></a></li>
           <li><a href=""><span class="menu2"></span><i>分类</i></a></li>
           <li><a href=""><span class="menu3"></span><i>购物车</i></a></li>
-          <li style=" border:0;"><a href=""><span class="menu4"></span><i>我的</i></a></li>
+          <li style=" border:0;"><a href=""><span class="menu4"></span>
+              <i>我的</i></a></li>
         </ul>
-      </div> 
+</div>
 
 
 <div class="dianpu_main">
-<dl>
-<p><a href="javascript:guanzhu(92);" style=" color:#FFF">收藏</a></p>
-<dt><img src="images/logo_supplier92.jpg" alt="西安程鸿电子"></dt>
-<dd><span>西安程鸿电子</span>
-</dd>
-</dl>
-<ul>
+    <div id="scrollimg" class="scrollimg">
+        <div class="bd">
+            <ul>
+
+                <li><a href=""><img src="images/aa.jpg" width="100%" /></a></li>
+
+                <li><a href=""><img src="images/bb.jpg" width="100%" /></a></li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="ui-flex banner-content" id="banner_box">
+            <div class="cell banner-shop" id="shopInfoLink" detailflag="1">
+                    <span href="javascript:;" class="shop-logo">
+													<img src="https://img30.360buyimg.com/popshop/jfs/t5761/244/9833856882/18651/3f12c6b7/598a7d1dN55fcddfe.jpg">
+						                    </span>
+                <div class="cell shop-info">
+                        <span href="javascript:;" class="ui-flex shop-name">
+                            <em>回力耀广专卖店</em>
+														                            <i class="cell a-icon"></i>
+							                        </span>
+                    <span class="ui-flex shop-other">
+
+                            <em class="cell follow-num">3785人关注</em>
+                        </span>
+                </div>
+            </div>
+            <input id="showFollowGiftFlag" type="hidden" value="0">
+            <div id="J-followBtn" class="banner-action
+					">
+                <i class="icon-follow"></i>
+                <span class="follow-text">
+						 关注
+											</span>
+                <input type="hidden" value="false" id="followed">
+            </div>
+        </div>
+    </div>
+
+    <ul>
 <li class="bian">
     <a href=""><span>店铺首页</span>
         <!--<strong>275</strong>-->
@@ -884,20 +918,276 @@ panda(function () {
 </li>
 </ul>
 </div>
+<section>
+    <!--<script type="text/javascript">-->
+    <!--var url = '';-->
+    <!--$(function(){-->
+    <!--$('#J_ItemList').more({'address': url});-->
+    <!--});-->
+    <!--</script>-->
+    <!--<div class="touchweb-com_searchListBox openList" id="goods_list">-->
+    <div class="touchweb-com_searchListBox openList" id="goods_list">
 
-<div id="scrollimg" class="scrollimg">
-				<div class="bd">
-					<ul>
+        <form action="javascript:void(0)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+            <div id="J_ItemList" style="opacity: 1;">
 
-          <li><a href=""><img src="images/20180328dspncb.jpg" width="100%" /></a></li>
+                <div class="product single_item info" id="more_element_1">
+                    <!--<style type="text/css">-->
+                        <!--.icon-shop_cart2{-->
+                            <!--/*background: url() no-repeat center center;*/-->
+                            <!--height: 30px;-->
+                            <!--width: 40px;-->
+                            <!--background-size: 30px 30px;-->
+                            <!--display: block;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+                                <img src="images/6805_thumb_G_1521222585064.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/64GB/1200万像素/平面手机 黑色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6810);">-</a>
+                            <input class="num" id="number_6810" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6810);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6810)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_2">
+                    <!--<style type="text/css">-->
+                        <!--.icon-shop_cart2{-->
+                            <!--background: url(images/category/shouwan.png) no-repeat center center;-->
+                            <!--height: 30px;-->
+                            <!--width: 40px;-->
+                            <!--background-size: 30px 30px;-->
+                            <!--display: block;-->
+                        <!--}-->
+                    <!--</style>-->
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
 
-          <li><a href=""><img src="images/20180328uuxoni.jpg" width="100%" /></a></li>
-        					</ul>
-				</div>
-				<div class="hd">
-					<ul></ul>
-				</div>
-			</div>
+                                <img src="images/6807_thumb_G_1521222600598.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/64GB/1200万像素/平面手机 白色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+
+
+</span>
+
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6811);">-</a>
+                            <input class="num" id="number_6811" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6811);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6811)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <!--<div class="product single_item info" id="more_element_3"><style type="text/css">-->
+                    <!--.icon-shop_cart2{-->
+                        <!--background: url(images/category/shouwan.png) no-repeat center center;-->
+                        <!--height: 30px;-->
+                        <!--width: 40px;-->
+                        <!--background-size: 30px 30px;-->
+                        <!--display: block;-->
+                    <!--}-->
+                <!--</style>-->
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/6807_thumb_G_1521222600598.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 白色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6808);">-</a>
+                            <input class="num" id="number_6808" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6808);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6808)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_4">
+                    <style type="text/css">
+                        .icon-shop_cart2{
+                            background: url(images/category/shouwan.png) no-repeat center center;
+                            height: 30px;
+                            width: 40px;
+                            background-size: 30px 30px;
+                            display: block;
+                        }
+                    </style>
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/6805_thumb_G_1521222585064.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 黑色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6801);">-</a>
+                            <input class="num" id="number_6801" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6801);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6801)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_5">
+                    <style type="text/css">
+                        .icon-shop_cart2{
+                            background: url(images/category/shouwan.png) no-repeat center center;
+                            height: 30px;
+                            width: 40px;
+                            background-size: 30px 30px;
+                            display: block;
+                        }
+                    </style>
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/6805_thumb_G_1521222585064.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 黑色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6805);">-</a>
+                            <input class="num" id="number_6805" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6805);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6805)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_6"><style type="text/css">
+                    .icon-shop_cart2{
+                        background: url(images/category/shouwan.png) no-repeat center center;
+                        height: 30px;
+                        width: 40px;
+                        background-size: 30px 30px;
+                        display: block;
+                    }
+                </style>
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/6807_thumb_G_1521222600598.jpg">
+                            </div>
+                            <div class="title_box">
+                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 白色</div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6807);">-</a>
+                            <input class="num" id="number_6807" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6807);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6807)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="more_loader_spinner" style="display: none;"></div>
+            </div>
+        </form>
+        <script language="javascript" type="text/javascript">
+            function goods_cut($val){
+                var num_val=document.getElementById('number_'+$val);
+                var new_num=num_val.value;
+                var Num = parseInt(new_num);
+                if(Num>1)Num=Num-1;
+                num_val.value=Num;
+            }
+            function goods_add($val){
+                var num_val=document.getElementById('number_'+$val);
+                var new_num=num_val.value;
+                var Num = parseInt(new_num);
+                Num=Num+1;
+                num_val.value=Num;
+            }
+        </script>
+    </div>
+</section>
+
 <script type="text/javascript">
 				TouchSlide({ 
 					slideCell:"#scrollimg",
@@ -929,6 +1219,19 @@ function goTop(){
 	$('html,body').animate({'scrollTop':0},600);
 }
 </script>
+<!--<script>-->
+       <!--$('.show_type').bind("click", function() {-->
+         <!--if ($('#goods_list').hasClass('openList')){-->
+    	<!--$('#goods_list').removeClass('openList');-->
+    	<!--$(this).removeClass('show_list');-->
+    	<!--}-->
+    	<!--else-->
+    	<!--{-->
+    	<!--$('#goods_list').addClass('openList');-->
+    	<!--$(this).addClass('show_list');-->
+    	 <!--}-->
+    <!--});-->
+<!--</script>-->
 <a href="javascript:goTop();" class="gotop"><img src="images/topup.png"></a>
 </body>
 </html>

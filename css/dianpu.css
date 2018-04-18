@@ -36,7 +36,10 @@ button {
 
 /*css初始值*/
 
-body {margin:0px;font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;font-size: 12px;line-height: 180%;color: #000000; min-width:320px;}
+body {margin:0px;font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;font-size: 12px;line-height: 180%;color: #000000; min-width:320px; margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;}
 
 html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {margin: 0;padding: 0;list-style-type: none;}
 
@@ -108,7 +111,10 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 .goods_nav{ width:30%; float:right; right:5px; overflow:hidden; position:fixed;margin-top:-20px; z-index:9999999}
 /*------------mall.dwt店铺信息--------------*/
-.dianpu_main{width:100%; overflow:hidden;background: url(../img/topbg.jpg) no-repeat center bottom}
+.dianpu_main{width:100%; overflow:hidden;
+	/*background: url(../img/topbg.jpg) no-repeat center bottom*/
+}
+
 .dianpu_main dl{width:100%; overflow:hidden; position:relative; padding-top:20px;}
 .dianpu_main dl p{ position:absolute; width:50px; height:35px;background-color:rgba(27,27,27,0.5); font-size:12px; line-height:35px; text-align:center; color:#FFF; right:5px; top:10px; border-radius:4px; }
 .dianpu_main dl dt{width:100%; overflow:hidden;}
@@ -117,9 +123,9 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 .dianpu_main dl dd span{ display:block; width:100%; overflow:hidden; font-size:14px; color:#FFF; text-align:center; line-height:20px; margin-top:10px;}
 .dianpu_main dl dd em{ display:block; width:100%; overflow:hidden; margin-top:10px;}
 .dianpu_main dl dd em img{ display:block; margin:auto; height:20px;}
-.dianpu_main ul{width:100%; overflow:hidden;background-color:rgba(27,27,27,0.3); margin-top:20px;}
+.dianpu_main ul{width:100%; overflow:hidden;background-color:rgba(27,27,27,0.3);}
 .dianpu_main ul li{ width:25%; float:left; height:50px; border-right:1px solid #bcbbbb; margin-left:-1px;}
-.dianpu_main ul li span{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; line-height:120%; color:#eeeeee; padding-top:10px;}
+.dianpu_main ul li span{ display:block; width:100%; overflow:hidden; text-align:center; font-size:12px; line-height:44px; color:#eeeeee; }
 .dianpu_main ul li strong{ display:block; width:100%; overflow:hidden; text-align:center; font-size:14px; line-height:150%; color:#fff}
 /*------------mall.dwt店铺信息------------
 
@@ -163,7 +169,7 @@ width: 0;height: 0;border-style: solid;border-color: transparent transparent #56
 
 /*banner*/
 
-	.scrollimg{ position:relative; overflow:hidden; margin:0px auto; margin-top:10px; }
+	.scrollimg{ position:relative; overflow:hidden; margin:0px auto; }
 
 	.scrollimg .hd{ position: absolute;
 
@@ -207,9 +213,12 @@ background: #f8f8f8;
 
 box-shadow: 0 0 2px #ccc; }
 
-	.scrollimg .bd{ position:relative; z-index:0; }
+	.scrollimg .bd{ position:relative; z-index:0;}
+.scrollimg .bd ul li{
+	height: 100%;}
 
-	.scrollimg .bd li{ position:relative; text-align:center;  }
+
+.scrollimg .bd li{ position:relative; text-align:center;  }
 
 	.scrollimg .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
 
@@ -243,7 +252,7 @@ box-shadow: 0 0 2px #ccc; }
 
 /*底部炫富菜单*/
 
-.bottm_nav{ position:fixed; bottom:0px; width:100%; height:40px; border-top:1px solid #dcdcdc; background:#fff}
+.bottm_nav{ position:fixed; bottom:0px; width:100%; height:40px; border-top:1px solid #dcdcdc; background:#fff;z-index: 100;}
 
 .bottm_nav ul{ width:100%; overflow:hidden}
 
@@ -357,7 +366,200 @@ box-shadow: 0 0 2px #ccc; }
 
 /*返回顶部*/
 
-.gotop{ display:block; width:40px; height:40px; position:fixed; bottom:70px; right:8px;background-color:rgba(243,241,241,0.5); border:1px solid #CCC; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
+.gotop{ display:block; width:40px; height:40px; position:fixed; bottom:70px; right:8px;background-color:rgba(243,241,241,0.5); border:1px solid #CCC; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;     z-index: 100;}
 
 .gotop img{ display:block; width:40px; height:40px;}
+
+.ui-flex {
+	display: -webkit-box !important;
+	display: -webkit-flex !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.banner-content {
+	background: #fff;
+	opacity: 0.7;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding: 0 .4rem.4rem;
+	z-index: 10;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.banner-shop {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 60px;
+}
+.banner-action {
+	position: relative;
+	display: block;
+	width: 2.56rem;
+	height: .96rem;
+	line-height: .96rem;
+	font-size: 0;
+	border-radius: .12rem;
+	color: #fff;
+	background-color: #f23030;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid transparent;
+}
+.banner-action .icon-follow {
+	display: inline-block;
+	width: .5rem;
+	height: .42rem;
+	/*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVBAMAAABBBVgrAAAAIVBMV…JEDYEuBasA+3CRA4uWCtwRVitnLQYZCFWrtQjuIoj/wAAAOWon6PfOXLIAAAAASUVORK5CYII=);*/
+	background-image:url("../images/heart.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.banner-action .follow-text {
+	font-size: .54rem;
+	margin-left: .16rem;
+}
+.banner-content .shop-logo {
+	display: inline-block;
+	/*width: 3.64rem;*/
+	/*height: 1.24rem;*/
+	background: #fff;
+	border: 1px solid #bfbfbf;
+	text-align: center;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.banner-content .shop-info {
+	display: inline-block;
+	position: relative;
+	margin-left: .2rem;
+	margin-right: .2rem;
+	font-size: 0;
+	background: red;
+}
+.banner-content .shop-logo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+.cell {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	/*width: 0;*/
+	-webkit-flex-basis: 0;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	max-width: 80%;
+	display: block;
+	padding: 0 !important;
+	position: relative;
+}
+.banner-content .shop-name {
+	font-size: .56rem;
+	color: #fff;
+	position: relative;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.banner-content .shop-other {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.banner-content .shop-name em {
+	display: block;
+	max-width: 6.8rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.banner-content .a-icon {
+	display: block;
+	width: .56rem;
+	height: .56rem;
+	margin-left: .16rem;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJ1BMV…HSmFxMxQhJTIvgktgdiZDE9CCa99ECBy3o0AIWLdjRIgUAkg+EY2Ta2tgAAAAASUVORK5CYII=);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.follow-num {
+	display: block;
+	font-size: .48rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #dfdfdf;
+}
+
+
+.banner-content .shop-name em {
+	display: block;
+	max-width: 6.8rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*#banner_box{*/
+	/*width:70rem;*/
+	/*!*height: 7.5rem;*!*/
+	/*!*overflow: hidden;*!*/
+	/*!*position: relative;*!*/
+	/*!*margin:0 auto;*!*/
+/*}*/
+/*#banner_box div{*/
+	/*width:96rem;*/
+	/*height: 7.5rem;*/
+	/*transform: translateX(-16rem);*/
+
+/*}*/
+.openList .ui-number { border: 1px solid #ddd9da; overflow: hidden; height: 25px; display: block; width: 92px; background: #FFF; margin-left: 15px; margin-top: 5px; margin-bottom: 12px; position: inherit; bottom: 0px; right: auto }
+.openList .ui-number{ border:1px solid #ddd9da; overflow:hidden; height:25px; display:block;width:92px; background:#FFF; position:absolute; bottom:0px; right:auto}
+.touchweb-com_searchListBox.openList li { float: left; width: 50%; }
+.touchweb-com_searchListBox.openList li:nth-child(even) .item { border-right-color: #fff; }
+.touchweb-com_searchListBox.openList .item .price_box {height:50px; }
+
+.touchweb-com_searchListBox.openList .item .pic_box { float: none; width: 100%; height: auto; margin-right: 0; margin-bottom: 10px; position: relative; }
+.touchweb-com_searchListBox.openList .item .pic_box.cloth:after { content: ''; padding-top: 140%; display: block; width: 100%; }
+.touchweb-com_searchListBox.openList .item .pic_box:after { content: ''; padding-top: 100%; display: block; width: 100%; }
+
+.touchweb-com_searchListBox.openList .item .active_box .active_tag { display: none; }
+.touchweb-com_searchListBox.openList .item .active_box .active_tag:nth-child(-n+1) { display: inline-block; }
+.touchweb-com_searchListBox.openList .item .comment_box { height:50px; padding-left:3px; display:none;}
+.touchweb-com_searchListBox.openList .bug_car { border-left: none; }
+.touchweb-com_searchListBox .bug_car { position: absolute; bottom: 12px; right: 0; z-index: 2; width: 40px; height: 28px; color: #ff3c3c; font-size: 2.2rem; text-align: center; }
+.touchweb-com_searchListBox.openList .bug_car { border-left: none; }
+
+.show_list { background: url(../images/category/gride.png) no-repeat center 9px; background-size: 20px 20px; }
 
