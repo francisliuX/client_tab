@@ -435,6 +435,7 @@ box-shadow: 0 0 2px #ccc; }
 }
 .banner-content .shop-logo {
 	display: inline-block;
+	margin-top: -50px;
 	/*width: 3.64rem;*/
 	/*height: 1.24rem;*/
 	background: #fff;
@@ -444,6 +445,8 @@ box-shadow: 0 0 2px #ccc; }
 	vertical-align: middle;
 }
 .banner-content .shop-info {
+	width: 126px;
+	/*height: 54px;*/
 	display: inline-block;
 	position: relative;
 	margin-left: .2rem;
@@ -472,6 +475,8 @@ box-shadow: 0 0 2px #ccc; }
 	position: relative;
 }
 .banner-content .shop-name {
+	/*width: 100px;*/
+	/*height: 60px;*/
 	font-size: .56rem;
 	color: #fff;
 	position: relative;
@@ -482,6 +487,7 @@ box-shadow: 0 0 2px #ccc; }
 	align-items: center;
 }
 .banner-content .shop-other {
+	padding-left: 4px;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-moz-box-align: center;
@@ -489,13 +495,7 @@ box-shadow: 0 0 2px #ccc; }
 	align-items: center;
 }
 
-.banner-content .shop-name em {
-	display: block;
-	max-width: 6.8rem;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
+
 .banner-content .a-icon {
 	display: block;
 	width: .56rem;
@@ -516,6 +516,8 @@ box-shadow: 0 0 2px #ccc; }
 
 
 .banner-content .shop-name em {
+	padding-left: 22px;
+	font-size: 13px;
 	display: block;
 	max-width: 6.8rem;
 	white-space: nowrap;
@@ -531,21 +533,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 	font: inherit;
 	vertical-align: baseline;
 }
-/*#banner_box{*/
-	/*width:70rem;*/
-	/*!*height: 7.5rem;*!*/
-	/*!*overflow: hidden;*!*/
-	/*!*position: relative;*!*/
-	/*!*margin:0 auto;*!*/
-/*}*/
-/*#banner_box div{*/
-	/*width:96rem;*/
-	/*height: 7.5rem;*/
-	/*transform: translateX(-16rem);*/
 
-/*}*/
-.openList .ui-number { border: 1px solid #ddd9da; overflow: hidden; height: 25px; display: block; width: 92px; background: #FFF; margin-left: 15px; margin-top: 5px; margin-bottom: 12px; position: inherit; bottom: 0px; right: auto }
-.openList .ui-number{ border:1px solid #ddd9da; overflow:hidden; height:25px; display:block;width:92px; background:#FFF; position:absolute; bottom:0px; right:auto}
+.openList .ui-number{ border:1px solid #ddd9da; overflow:hidden; height:25px; display:block;width:83px; background:#FFF; position:absolute; bottom:0px; right:auto;    margin-left: 14px;
+	margin-bottom: 10px;}
 .touchweb-com_searchListBox.openList li { float: left; width: 50%; }
 .touchweb-com_searchListBox.openList li:nth-child(even) .item { border-right-color: #fff; }
 .touchweb-com_searchListBox.openList .item .price_box {height:50px; }
@@ -562,4 +552,141 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .touchweb-com_searchListBox.openList .bug_car { border-left: none; }
 
 .show_list { background: url(../images/category/gride.png) no-repeat center 9px; background-size: 20px 20px; }
+
+/*----------------------------------------------------------*/
+.client_hot {
+    width: 1210px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.client_hot .hot_title {
+    width: 1210px;
+    height: 40px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-bottom: 2px solid #d9271d;
+    float: left;
+}
+.hot_title .title {
+    width: 600px;
+    height: 40px;
+    overflow: hidden;
+    margin-left: 15px;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #666;
+    border-bottom: 2px solid #d9271d;
+    float: left;
+}
+.hot_title .more {
+    width: 600px;
+    height: 18px;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    float: left;
+    line-height: 18px;
+    text-align: right;
+    font-family: "\5b8b\4f53";
+}
+.recom li img {
+    width: 65%;
+    height: auto;
+}
+.floor1 {
+    width: 1210px;
+    height: auto;
+    overflow: hidden;
+    /*margin-bottom: 15px;*/
+    float: left;
+}
+
+.floor1_title {
+    width: 1210px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+.floor1_title .floor1_tit {
+    width: 560px;
+    height: 40px;
+    margin-left: 13px;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+    font-size: 20px;
+    font-weight: 400;
+    color: #666;
+    float: left;
+}
+.floor1_title .floor1_more {
+    width: 600px;
+    height: 18px;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    float: left;
+    line-height: 18px;
+    text-align: right;
+    font-family: "\5b8b\4f53";
+}
+.floor1_title .floor1_num {
+    width: 35px;
+    height: 40px;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #666;
+    float: left;
+}
+.floor1_title .floor1_txt {
+    width: auto;
+    height: 40px;
+    padding-right: 10px;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #666;
+    float: left;
+}
+.floor1_title .floor1_tag {
+    width: 83px;
+    height: 40px;
+    overflow: hidden;
+    background: url(../img/floor_tuijian.jpg) 0 10px scroll no-repeat;
+    float: left;
+}
+.floor1 .floor1_inner {
+    width: 1198px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #eee;
+    float: left;
+}
+.floor1 .floor1_con {
+    width: 1210px;
+    height: auto;
+    overflow: hidden;
+    padding: 15px 0;
+    float: left;
+}
+.floor1 .floor1_con .floor1_li {
+    width: 199px;
+    height: 290px;
+    overflow: hidden;
+    border-right: 1px solid #eee;
+    float: left;
+    /* background: yellowgreen; */
+}
+
+
+
 

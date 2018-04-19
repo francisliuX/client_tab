@@ -1,858 +1,858 @@
 <!DOCTYPE html >
 <html>
 <head>
-<meta name="Generator" content="ECSHOP v2.7.3" />
-<meta charset="UTF-8">
-<meta name="Keywords" content="线材，器材，卡类，转接头，转接线，电源线，数据线，程鸿" />
-<meta name="Description" content="商家店铺描述" />
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="线材，器材，卡类，转接头，转接线，电源线，数据线，程鸿" />
+    <meta name="Description" content="商家店铺描述" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-<title>店家</title>
+    <title>店家</title>
 
 
     <link rel="stylesheet" href="css/category_list.css">
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="icon" href="animated_favicon.gif" type="image/gif" />
-<link rel="alternate" type="application/rss+xml" title="RSS|西安程鸿电子  " href="" />
-<link rel="stylesheet" type="text/css" href="css/dianpu.css">
-<script src="js/run_common-min.js" charset="utf-8" type="text/javascript" itemid="run_common.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="animated_favicon.gif" type="image/gif" />
+    <link rel="alternate" type="application/rss+xml" title="RSS|西安程鸿电子  " href="" />
+    <link rel="stylesheet" type="text/css" href="css/dianpu.css">
+    <script src="js/run_common-min.js" charset="utf-8" type="text/javascript" itemid="run_common.js"></script>
 
-<script type="text/javascript">window.pageConfig = {compatible: true}; </script>
-<script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript">
-            
-panda(function (){
-	var mask = panda(".mask")
-	var category = panda(".c-category-list")
-	
-	var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
-    var hasTouch = 'ontouchstart' in window && !isTouchPad;
-	
-	if(hasTouch){
-			panda(".icon-nav").bind("touchstart",function (){
-			  mask.css("display","block");
-			  category.toggleClass("category-show");
-			})
-			
-			mask.bind("touchstart",function (){
-				mask.css("display","none");
-category.removeClass("category-show");
-				return false;
-			})
-	}else{
-		panda(".icon-nav").bind("click",function (){
-          mask.css("display","block");
-		  category.toggleClass("category-show");
-		})
-		
-		mask.bind("click",function (){
-			mask.css("display","none");
- category.removeClass("category-show");
-			return false;
-		})
-	}
-		
-	panda('.mobile_shop_btn').on('click',function(){
-    	var search = $('#mobile_shop_search');
-		var url = search.attr("url"),
-			keyword = encodeURIComponent(search.val());
-		keyword = encodeURIComponent(keyword);
-               if(url ){
+    <script type="text/javascript">window.pageConfig = {compatible: true}; </script>
+    <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript">
+
+    panda(function (){
+        var mask = panda(".mask")
+        var category = panda(".c-category-list")
+
+        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
+        var hasTouch = 'ontouchstart' in window && !isTouchPad;
+
+        if(hasTouch){
+            panda(".icon-nav").bind("touchstart",function (){
+                mask.css("display","block");
+                category.toggleClass("category-show");
+            })
+
+            mask.bind("touchstart",function (){
+                mask.css("display","none");
+                category.removeClass("category-show");
+                return false;
+            })
+        }else{
+            panda(".icon-nav").bind("click",function (){
+                mask.css("display","block");
+                category.toggleClass("category-show");
+            })
+
+            mask.bind("click",function (){
+                mask.css("display","none");
+                category.removeClass("category-show");
+                return false;
+            })
+        }
+
+        panda('.mobile_shop_btn').on('click',function(){
+            var search = $('#mobile_shop_search');
+            var url = search.attr("url"),
+                keyword = encodeURIComponent(search.val());
+            keyword = encodeURIComponent(keyword);
+            if(url ){
                 if(keyword ){
-                     window.location.href = url + "?keyword="+keyword;
+                    window.location.href = url + "?keyword="+keyword;
                 }else{
                     window.location.href = url;
                 }
-}
-		
-	});
-	
-})
-define("PSlide", [], function (require, exports, module) {
-    var PSlide = function (a) {
+            }
 
-        a = a || {};
-        var opts = {
-            slideCell: a.slideCell,
-            titCell: a.titCell || ".hd li", // 导航对象，当自动分页设为true时为“导航对象包裹层”
-            mainCell: a.mainCell || ".bd", // 切换对象包裹层
-            effect: a.effect || "left", // 效果，支持 left、leftLoop
-            autoPlay: a.autoPlay || false, // 自动播放
-            delayTime: a.delayTime || 200, // 效果持续时间
-            interTime: a.interTime || 2500, // 自动运行间隔
-            defaultIndex: a.defaultIndex || 0, // 默认的当前位置索引。0是第一个； defaultIndex:1 时，相当于从第2个开始执行
-            titOnClassName: a.titOnClassName || "active", // 当前导航对象添加的className
-            autoPage: a.autoPage || false, // 自动分页，当为true时titCell为“导航对象包裹层”
-            prevCell: a.prevCell || ".prev", // 前一页按钮
-            nextCell: a.nextCell || ".next", // 后一页按钮
-            pageStateCell: a.pageStateCell || ".pageState", // 分页状态对象，用于显示分页状态，例如：2/3
-            pnLoop: a.pnLoop == 'undefined ' ? true : a.pnLoop, // 前后按钮点击是否继续执行效果，当为最前/后页是会自动添加“prevStop”/“nextStop”控制样色
-            startFun: a.startFun || null, // 每次切换效果开始时执行函数，用于处理特殊情况或创建更多效果。用法 satrtFun:function(i,c){}； 其中i为当前分页，c为总页数
-            endFun: a.endFun || null, // 每次切换效果结束时执行函数，用于处理特殊情况或创建更多效果。用法 endFun:function(i,c){}； 其中i为当前分页，c为总页数
-            switchLoad: a.switchLoad || null, //每次切换效果结束时执行函数，用于处理特殊情况或创建更多效果。用法 endFun:function(i,c){}； 其中i为当前分页，c为总页数
+        });
 
-            rank: a.rank || 1,
-            parent: a.parent || ""
-        };
+    })
+    define("PSlide", [], function (require, exports, module) {
+        var PSlide = function (a) {
 
-        var slideCell = opts.slideCell;//document.getElementById(opts.slideCell.replace("#", ""));
-        var parent = document.getElementById(opts.parent.replace("#", ""));
-        if (!slideCell) return false;
+            a = a || {};
+            var opts = {
+                slideCell: a.slideCell,
+                titCell: a.titCell || ".hd li", // 导航对象，当自动分页设为true时为“导航对象包裹层”
+                mainCell: a.mainCell || ".bd", // 切换对象包裹层
+                effect: a.effect || "left", // 效果，支持 left、leftLoop
+                autoPlay: a.autoPlay || false, // 自动播放
+                delayTime: a.delayTime || 200, // 效果持续时间
+                interTime: a.interTime || 2500, // 自动运行间隔
+                defaultIndex: a.defaultIndex || 0, // 默认的当前位置索引。0是第一个； defaultIndex:1 时，相当于从第2个开始执行
+                titOnClassName: a.titOnClassName || "active", // 当前导航对象添加的className
+                autoPage: a.autoPage || false, // 自动分页，当为true时titCell为“导航对象包裹层”
+                prevCell: a.prevCell || ".prev", // 前一页按钮
+                nextCell: a.nextCell || ".next", // 后一页按钮
+                pageStateCell: a.pageStateCell || ".pageState", // 分页状态对象，用于显示分页状态，例如：2/3
+                pnLoop: a.pnLoop == 'undefined ' ? true : a.pnLoop, // 前后按钮点击是否继续执行效果，当为最前/后页是会自动添加“prevStop”/“nextStop”控制样色
+                startFun: a.startFun || null, // 每次切换效果开始时执行函数，用于处理特殊情况或创建更多效果。用法 satrtFun:function(i,c){}； 其中i为当前分页，c为总页数
+                endFun: a.endFun || null, // 每次切换效果结束时执行函数，用于处理特殊情况或创建更多效果。用法 endFun:function(i,c){}； 其中i为当前分页，c为总页数
+                switchLoad: a.switchLoad || null, //每次切换效果结束时执行函数，用于处理特殊情况或创建更多效果。用法 endFun:function(i,c){}； 其中i为当前分页，c为总页数
 
-        //简单模拟jquery选择器
-        var obj = function (str, parEle) {
-            str = str.split(" ");
-            var par = [];
-            parEle = parEle || document;
-            var retn = [ parEle ];
-            for (var i in str) {
-                if (str[i].length != 0) par.push(str[i])
-            } //去掉重复空格
-            for (var i in par) {
-                if(par.hasOwnProperty(i)){
-                    if (retn.length == 0) return false;
-                    var _retn = [];
-                    for (var r in retn) {
-                        if(retn.hasOwnProperty(r)){
-                            if (par[i][0] == "#") _retn.push(document.getElementById(par[i].replace("#", "")));
-                            else if (par[i][0] == ".") {
-                                var tag = retn[r].getElementsByTagName('*');
-                                for (var j = 0; j < tag.length; j++) {
-                                    var cln = tag[j].className;
-                                    if (cln && cln.search(new RegExp("\\b" + par[i].replace(".", "") + "\\b")) != -1) {
-                                        _retn.push(tag[j]);
+                rank: a.rank || 1,
+                parent: a.parent || ""
+            };
+
+            var slideCell = opts.slideCell;//document.getElementById(opts.slideCell.replace("#", ""));
+            var parent = document.getElementById(opts.parent.replace("#", ""));
+            if (!slideCell) return false;
+
+            //简单模拟jquery选择器
+            var obj = function (str, parEle) {
+                str = str.split(" ");
+                var par = [];
+                parEle = parEle || document;
+                var retn = [ parEle ];
+                for (var i in str) {
+                    if (str[i].length != 0) par.push(str[i])
+                } //去掉重复空格
+                for (var i in par) {
+                    if(par.hasOwnProperty(i)){
+                        if (retn.length == 0) return false;
+                        var _retn = [];
+                        for (var r in retn) {
+                            if(retn.hasOwnProperty(r)){
+                                if (par[i][0] == "#") _retn.push(document.getElementById(par[i].replace("#", "")));
+                                else if (par[i][0] == ".") {
+                                    var tag = retn[r].getElementsByTagName('*');
+                                    for (var j = 0; j < tag.length; j++) {
+                                        var cln = tag[j].className;
+                                        if (cln && cln.search(new RegExp("\\b" + par[i].replace(".", "") + "\\b")) != -1) {
+                                            _retn.push(tag[j]);
+                                        }
+                                    }
+                                }
+                                else {
+                                    var tag = retn[r].getElementsByTagName(par[i]);
+                                    for (var j = 0; j < tag.length; j++) {
+                                        _retn.push(tag[j])
                                     }
                                 }
                             }
-                            else {
-                                var tag = retn[r].getElementsByTagName(par[i]);
-                                for (var j = 0; j < tag.length; j++) {
-                                    _retn.push(tag[j])
-                                }
-                            }
                         }
+                        retn = _retn;
                     }
-                    retn = _retn;
                 }
-            }
 
-            return retn.length == 0 || retn[0] == parEle ? false : retn;
-        }// obj E
+                return retn.length == 0 || retn[0] == parEle ? false : retn;
+            }// obj E
 
-        // 创建包裹层
-        var wrap = function (el, v) {
-            var tmp = document.createElement('div');
-            tmp.innerHTML = v;
-            tmp = tmp.children[0];
-            var _el = el.cloneNode(true);
-            tmp.appendChild(_el);
-            el.parentNode.replaceChild(tmp, el);
-            conBox = _el; // 重置conBox
-        };
+            // 创建包裹层
+            var wrap = function (el, v) {
+                var tmp = document.createElement('div');
+                tmp.innerHTML = v;
+                tmp = tmp.children[0];
+                var _el = el.cloneNode(true);
+                tmp.appendChild(_el);
+                el.parentNode.replaceChild(tmp, el);
+                conBox = _el; // 重置conBox
+            };
 
-        // 获取样色数值
-        var getStyleVal = function (el, attr) {
-            var v = 0;
-            if (el.currentStyle) {
-                v = el.currentStyle[attr]
-            } else {
-                v = getComputedStyle(el, false)[attr];
-            }
-            return parseInt(v.replace("px", ""))
-        }
-
-        // class处理
-        var addClass = function (ele, className) {
-            if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) != -1)) return;
-            ele.className += (ele.className ? " " : "") + className;
-        }
-
-        var removeClass = function (ele, className) {
-            if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) == -1)) return;
-            ele.className = ele.className.replace(new RegExp("\\s*\\b" + className + "\\b", "g"), "");
-        }
-
-        //全局对象
-        var effect = opts.effect;
-        var prevBtn = obj(opts.prevCell, slideCell)[0];
-        var nextBtn = obj(opts.nextCell, slideCell)[0];
-        var pageState = obj(opts.pageStateCell)[0];
-        var conBox = obj(opts.mainCell, slideCell)[0];//内容元素父层对象
-        if (!conBox) return false;
-        var conBoxSize = conBox.children.length;
-        var navObj = obj(opts.titCell, slideCell);//导航子元素结合
-        var navObjSize = navObj ? navObj.length : conBoxSize;
-        var sLoad = opts.switchLoad;
-
-        /*字符串转换*/
-        var index = parseInt(opts.defaultIndex);
-        var delayTime = parseInt(opts.delayTime);
-        var interTime = parseInt(opts.interTime);
-        var autoPlay = (opts.autoPlay == "false" || opts.autoPlay == false) ? false : true;
-        var autoPage = (opts.autoPage == "false" || opts.autoPage == false) ? false : true;
-        var loop = (opts.pnLoop == "false" || opts.pnLoop == false) ? false : true;
-        var oldIndex = index;
-        var inter = null;// autoPlay的setInterval
-        var timeout = null; // leftLoop的setTimeout
-        var endTimeout = null;  //translate的setTimeout
-
-        var startX = 0;
-        var startY = 0;
-        var distX = 0;
-        var distY = 0;
-        var dist = 0; //手指滑动距离
-        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
-        var hasTouch = 'ontouchstart' in window && !isTouchPad;
-        var touchStart = hasTouch ? 'touchstart' : 'mousedown';
-        var touchMove = hasTouch ? 'touchmove' : 'mousemove';
-        var touchEnd = hasTouch ? 'touchend' : 'mouseup';
-        var resizeStart=hasTouch?'orientationchange':'resize';
-        var slideH = 0;
-        var slideW = 320;// mainCell滑动距离，后面会覆盖
-        var selfW = 0;
-        var scrollY;
-
-        //处理分页
-        if (navObjSize == 0)navObjSize = conBoxSize / opts.rank;
-        if (autoPage) {
-            navObjSize = conBoxSize / opts.rank;
-            navObj = navObj[0];
-            navObj.innerHTML = "";
-            var str = "";
-
-            if (opts.autoPage == true || opts.autoPage == "true") {
-                for (var i = 0; i < navObjSize; i++) {
-                    str += "<li class='left'></li>"
-                }
-            } else {
-                for (var i = 0; i < navObjSize; i++) {
-                    str += opts.autoPage.replace("$", (i + 1))
-                }
-            }
-
-            navObj.innerHTML = str;
-            navObj = navObj.children;//重置navObj
-        }
-
-        //取最大值
-        for (var i = 0; i < conBoxSize; i++) {
-            var chi = conBox.children[i];
-            var ma = getStyleVal(chi, "marginLeft") + getStyleVal(chi, "marginRight");
-            var pa = getStyleVal(chi, "paddingLeft") + getStyleVal(chi, "paddingRight");
-            var chiW = chi.clientWidth - pa;
-            var chiSW = chi.offsetWidth + ma + pa;
-            if (chiW > selfW) {
-                if (opts.rank == 2) {
-                    selfW = getStyleVal(parent, "width") - pa;
-                    slideW = getStyleVal(parent, "width") - (opts.rank + 1) * getStyleVal(chi, "paddingLeft");
+            // 获取样色数值
+            var getStyleVal = function (el, attr) {
+                var v = 0;
+                if (el.currentStyle) {
+                    v = el.currentStyle[attr]
                 } else {
-                    selfW = chiW;
-                    slideW = chiSW
-
+                    v = getComputedStyle(el, false)[attr];
                 }
+                return parseInt(v.replace("px", ""))
             }
-        }
 
-
-        switch (effect) {
-            case "left":
-                conBox.style.cssText = "width:" + conBoxSize * slideW + "px;" + "position:relative;overflow:hidden;padding:0;margin:0;";
-                for (var i = 0; i < conBoxSize; i++) {
-                    conBox.children[i].style.cssText = "float:left;width:" + Math.floor(selfW / opts.rank) + "px;"
-                }
-                wrap(conBox, '<div class="tempWrap" style="overflow:hidden; position:relative; width:' + slideW + 'px"></div>');
-                break;
-            case "leftLoop":
-                conBox.appendChild(conBox.children[0].cloneNode(true));
-                conBox.insertBefore(conBox.children[conBoxSize - 1].cloneNode(true), conBox.children[0]);
-                conBox.style.cssText = "width:" + (conBoxSize + 2) * slideW + "px;" + "position:relative;overflow:hidden;padding:0;margin:0;";
-                for (var i = 0; i < conBoxSize + 2; i++) {
-                    conBox.children[i].style.cssText = "float:left;width:" + Math.floor(selfW / opts.rank) + "px;";
-                }
-                wrap(conBox, '<div class="tempWrap" style="position:relative; width:' + slideW + 'px"></div>');
-                break;
-        }
-
-        var doStartFun = function () {
-            if (typeof opts.startFun == 'function') {
-                opts.startFun(index, navObjSize)
+            // class处理
+            var addClass = function (ele, className) {
+                if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) != -1)) return;
+                ele.className += (ele.className ? " " : "") + className;
             }
-        }
-        var doEndFun = function () {
-            if (typeof opts.endFun == 'function') {
-                opts.endFun(index, navObjSize)
+
+            var removeClass = function (ele, className) {
+                if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) == -1)) return;
+                ele.className = ele.className.replace(new RegExp("\\s*\\b" + className + "\\b", "g"), "");
             }
-        }
-        var doSwitchLoad = function (moving) {
-            var curIndex = ( effect == "leftLoop" ? index + 1 : index ) + moving;
-            var changeImg = function (ind) {
-                var img = conBox.children[ind].getElementsByTagName("img");
-                for (var i = 0; i < img.length; i++) {
-                    if (img[i].getAttribute(sLoad)) {
-                        img[i].setAttribute("src", img[i].getAttribute(sLoad));
-                        img[i].removeAttribute(sLoad);
+
+            //全局对象
+            var effect = opts.effect;
+            var prevBtn = obj(opts.prevCell, slideCell)[0];
+            var nextBtn = obj(opts.nextCell, slideCell)[0];
+            var pageState = obj(opts.pageStateCell)[0];
+            var conBox = obj(opts.mainCell, slideCell)[0];//内容元素父层对象
+            if (!conBox) return false;
+            var conBoxSize = conBox.children.length;
+            var navObj = obj(opts.titCell, slideCell);//导航子元素结合
+            var navObjSize = navObj ? navObj.length : conBoxSize;
+            var sLoad = opts.switchLoad;
+
+            /*字符串转换*/
+            var index = parseInt(opts.defaultIndex);
+            var delayTime = parseInt(opts.delayTime);
+            var interTime = parseInt(opts.interTime);
+            var autoPlay = (opts.autoPlay == "false" || opts.autoPlay == false) ? false : true;
+            var autoPage = (opts.autoPage == "false" || opts.autoPage == false) ? false : true;
+            var loop = (opts.pnLoop == "false" || opts.pnLoop == false) ? false : true;
+            var oldIndex = index;
+            var inter = null;// autoPlay的setInterval
+            var timeout = null; // leftLoop的setTimeout
+            var endTimeout = null;  //translate的setTimeout
+
+            var startX = 0;
+            var startY = 0;
+            var distX = 0;
+            var distY = 0;
+            var dist = 0; //手指滑动距离
+            var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
+            var hasTouch = 'ontouchstart' in window && !isTouchPad;
+            var touchStart = hasTouch ? 'touchstart' : 'mousedown';
+            var touchMove = hasTouch ? 'touchmove' : 'mousemove';
+            var touchEnd = hasTouch ? 'touchend' : 'mouseup';
+            var resizeStart=hasTouch?'orientationchange':'resize';
+            var slideH = 0;
+            var slideW = 320;// mainCell滑动距离，后面会覆盖
+            var selfW = 0;
+            var scrollY;
+
+            //处理分页
+            if (navObjSize == 0)navObjSize = conBoxSize / opts.rank;
+            if (autoPage) {
+                navObjSize = conBoxSize / opts.rank;
+                navObj = navObj[0];
+                navObj.innerHTML = "";
+                var str = "";
+
+                if (opts.autoPage == true || opts.autoPage == "true") {
+                    for (var i = 0; i < navObjSize; i++) {
+                        str += "<li class='left'></li>"
+                    }
+                } else {
+                    for (var i = 0; i < navObjSize; i++) {
+                        str += opts.autoPage.replace("$", (i + 1))
                     }
                 }
-            }// changeImg E
-            changeImg(curIndex);
-            if (effect == "leftLoop") {
-                switch (curIndex) {
-                    case 0:
-                        changeImg(conBoxSize);
-                        break;
-                    case 1:
-                        changeImg(conBoxSize + 1);
-                        break;
-                    case conBoxSize:
-                        changeImg(0);
-                        break;
-                    case conBoxSize + 1:
-                        changeImg(1);
-                        break;
+
+                navObj.innerHTML = str;
+                navObj = navObj.children;//重置navObj
+            }
+
+            //取最大值
+            for (var i = 0; i < conBoxSize; i++) {
+                var chi = conBox.children[i];
+                var ma = getStyleVal(chi, "marginLeft") + getStyleVal(chi, "marginRight");
+                var pa = getStyleVal(chi, "paddingLeft") + getStyleVal(chi, "paddingRight");
+                var chiW = chi.clientWidth - pa;
+                var chiSW = chi.offsetWidth + ma + pa;
+                if (chiW > selfW) {
+                    if (opts.rank == 2) {
+                        selfW = getStyleVal(parent, "width") - pa;
+                        slideW = getStyleVal(parent, "width") - (opts.rank + 1) * getStyleVal(chi, "paddingLeft");
+                    } else {
+                        selfW = chiW;
+                        slideW = chiSW
+
+                    }
                 }
             }
-        }// doSwitchLoad E
 
-        var translate = function (dist, speed, ele) {
-            if (!!ele) {
-                ele = ele.style;
-            } else {
-                ele = conBox.style;
-            }
-            ele.webkitTransitionDuration = ele.MozTransitionDuration = ele.msTransitionDuration = ele.OTransitionDuration = ele.transitionDuration = speed + 'ms';
-            ele.webkitTransform = 'translate(' + dist + 'px,0)' + 'translateZ(0)';
-            ele.msTransform = ele.MozTransform = ele.OTransform = 'translateX(' + dist + 'px)';
-        }
 
-        //效果函数
-        var doPlay = function (isTouch) {
             switch (effect) {
                 case "left":
-                    if (index >= navObjSize) {
-                        index = isTouch ? index - 1 : 0;
-                    } else if (index < 0) {
-                        index = isTouch ? 0 : navObjSize - 1;
+                    conBox.style.cssText = "width:" + conBoxSize * slideW + "px;" + "position:relative;overflow:hidden;padding:0;margin:0;";
+                    for (var i = 0; i < conBoxSize; i++) {
+                        conBox.children[i].style.cssText = "float:left;width:" + Math.floor(selfW / opts.rank) + "px;"
                     }
-                    if (sLoad != null) {
-                        doSwitchLoad(0)
-                    }
-                    translate((-index * slideW), delayTime);
-                    oldIndex = index;
+                    wrap(conBox, '<div class="tempWrap" style="overflow:hidden; position:relative; width:' + slideW + 'px"></div>');
                     break;
-
-
                 case "leftLoop":
-                    if (sLoad != null) {
-                        doSwitchLoad(0)
+                    conBox.appendChild(conBox.children[0].cloneNode(true));
+                    conBox.insertBefore(conBox.children[conBoxSize - 1].cloneNode(true), conBox.children[0]);
+                    conBox.style.cssText = "width:" + (conBoxSize + 2) * slideW + "px;" + "position:relative;overflow:hidden;padding:0;margin:0;";
+                    for (var i = 0; i < conBoxSize + 2; i++) {
+                        conBox.children[i].style.cssText = "float:left;width:" + Math.floor(selfW / opts.rank) + "px;";
                     }
-                    translate(-(index + 1) * slideW, delayTime);
-                    if (index == -1) {
-                        timeout = setTimeout(function () {
-                            translate(-navObjSize * slideW, 0);
-                        }, delayTime);
-                        index = navObjSize - 1;
+                    wrap(conBox, '<div class="tempWrap" style="position:relative; width:' + slideW + 'px"></div>');
+                    break;
+            }
+
+            var doStartFun = function () {
+                if (typeof opts.startFun == 'function') {
+                    opts.startFun(index, navObjSize)
+                }
+            }
+            var doEndFun = function () {
+                if (typeof opts.endFun == 'function') {
+                    opts.endFun(index, navObjSize)
+                }
+            }
+            var doSwitchLoad = function (moving) {
+                var curIndex = ( effect == "leftLoop" ? index + 1 : index ) + moving;
+                var changeImg = function (ind) {
+                    var img = conBox.children[ind].getElementsByTagName("img");
+                    for (var i = 0; i < img.length; i++) {
+                        if (img[i].getAttribute(sLoad)) {
+                            img[i].setAttribute("src", img[i].getAttribute(sLoad));
+                            img[i].removeAttribute(sLoad);
+                        }
                     }
-                    else if (index == navObjSize) {
-                        timeout = setTimeout(function () {
-                            translate(-slideW, 0);
-                        }, delayTime);
-                        index = 0;
+                }// changeImg E
+                changeImg(curIndex);
+                if (effect == "leftLoop") {
+                    switch (curIndex) {
+                        case 0:
+                            changeImg(conBoxSize);
+                            break;
+                        case 1:
+                            changeImg(conBoxSize + 1);
+                            break;
+                        case conBoxSize:
+                            changeImg(0);
+                            break;
+                        case conBoxSize + 1:
+                            changeImg(1);
+                            break;
                     }
-                    oldIndex = index;
-                    break;// leftLoop end
-
-            }//switch end
-            doStartFun();
-            endTimeout = setTimeout(function () {
-                doEndFun()
-            }, delayTime);
-
-            //设置className
-            for (var i = 0; i < navObjSize; i++) {
-                removeClass(navObj[i], opts.titOnClassName);
-                if (i == index) {
-                    addClass(navObj[i], opts.titOnClassName)
                 }
+            }// doSwitchLoad E
+
+            var translate = function (dist, speed, ele) {
+                if (!!ele) {
+                    ele = ele.style;
+                } else {
+                    ele = conBox.style;
+                }
+                ele.webkitTransitionDuration = ele.MozTransitionDuration = ele.msTransitionDuration = ele.OTransitionDuration = ele.transitionDuration = speed + 'ms';
+                ele.webkitTransform = 'translate(' + dist + 'px,0)' + 'translateZ(0)';
+                ele.msTransform = ele.MozTransform = ele.OTransform = 'translateX(' + dist + 'px)';
             }
 
-            if (loop == false) { //loop控制是否继续循环
-                removeClass(nextBtn, "nextStop");
-                removeClass(prevBtn, "prevStop");
-                if (index == 0) {
-                    addClass(prevBtn, "prevStop")
-                }
-                else if (index == navObjSize - 1) {
-                    addClass(nextBtn, "nextStop")
-                }
-            }
-            if (pageState) {
-                pageState.innerHTML = "<span>" + (index + 1) + "</span>/" + navObjSize;
-            }
-        };// doPlay end
-
-        //初始化执行
-        doPlay();
-
-        //自动播放
-        if (autoPlay) {
-            inter = setInterval(function () {
-                index++;
-                doPlay();
-            }, interTime);
-        }
-
-        //点击事件
-        if (navObj) {
-            for (var i = 0; i < navObjSize; i++) {
-                (function () {
-                    var j = i;
-                    navObj[j].addEventListener('click', function (e) {
-                        clearTimeout(timeout);
-                        clearTimeout(endTimeout);
-                        index = j;
-                        doPlay();
-                    })
-                })()
-
-            }
-        }
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function (e) {
-                if (loop == true || index != navObjSize - 1) {
-                    clearTimeout(timeout);
-                    clearTimeout(endTimeout);
-                    index++;
-                    doPlay();
-                }
-            })
-        }
-        if (prevBtn) {
-            prevBtn.addEventListener('click', function (e) {
-                if (loop == true || index != 0) {
-                    clearTimeout(timeout);
-                    clearTimeout(endTimeout);
-                    index--;
-                    doPlay();
-                }
-            })
-        }
-
-
-        //触摸开始函数
-        var tStart = function (e) {
-            clearTimeout(timeout);
-            clearTimeout(endTimeout);
-            scrollY = undefined;
-            distX = 0;
-            var point = hasTouch ? e.touches[0] : e;
-            startX = point.pageX;
-            startY = point.pageY;
-
-            //添加“触摸移动”事件监听
-            conBox.addEventListener(touchMove, tMove, false);
-            //添加“触摸结束”事件监听
-            conBox.addEventListener(touchEnd, tEnd, false);
-        }
-
-        //触摸移动函数
-        var tMove = function (e) {
-            if (hasTouch) {
-                if (e.touches.length > 1 || e.scale && e.scale !== 1) return
-            }
-            ; //多点或缩放
-
-            var point = hasTouch ? e.touches[0] : e;
-            distX = point.pageX - startX;
-            distY = point.pageY - startY;
-
-            if (typeof scrollY == 'undefined') {
-                scrollY = !!( scrollY || Math.abs(distX) < Math.abs(distY) );
-            }
-            if (!scrollY) {
-                e.preventDefault();
-                if (autoPlay) {
-                    clearInterval(inter)
-                }
+            //效果函数
+            var doPlay = function (isTouch) {
                 switch (effect) {
                     case "left":
-                        if ((index == 0 && distX > 0) || (index >= navObjSize - 1 && distX < 0 )) {
-                            distX = distX * 0.4
+                        if (index >= navObjSize) {
+                            index = isTouch ? index - 1 : 0;
+                        } else if (index < 0) {
+                            index = isTouch ? 0 : navObjSize - 1;
                         }
-                        translate(-index * slideW + distX, 0);
+                        if (sLoad != null) {
+                            doSwitchLoad(0)
+                        }
+                        translate((-index * slideW), delayTime);
+                        oldIndex = index;
                         break;
+
+
                     case "leftLoop":
-                        translate(-(index + 1) * slideW + distX, 0);
-                        break;
+                        if (sLoad != null) {
+                            doSwitchLoad(0)
+                        }
+                        translate(-(index + 1) * slideW, delayTime);
+                        if (index == -1) {
+                            timeout = setTimeout(function () {
+                                translate(-navObjSize * slideW, 0);
+                            }, delayTime);
+                            index = navObjSize - 1;
+                        }
+                        else if (index == navObjSize) {
+                            timeout = setTimeout(function () {
+                                translate(-slideW, 0);
+                            }, delayTime);
+                            index = 0;
+                        }
+                        oldIndex = index;
+                        break;// leftLoop end
+
+                }//switch end
+                doStartFun();
+                endTimeout = setTimeout(function () {
+                    doEndFun()
+                }, delayTime);
+
+                //设置className
+                for (var i = 0; i < navObjSize; i++) {
+                    removeClass(navObj[i], opts.titOnClassName);
+                    if (i == index) {
+                        addClass(navObj[i], opts.titOnClassName)
+                    }
                 }
 
-                if (sLoad != null && Math.abs(distX) > slideW / 3) {
-                    doSwitchLoad(distX > -0 ? -1 : 1)
+                if (loop == false) { //loop控制是否继续循环
+                    removeClass(nextBtn, "nextStop");
+                    removeClass(prevBtn, "prevStop");
+                    if (index == 0) {
+                        addClass(prevBtn, "prevStop")
+                    }
+                    else if (index == navObjSize - 1) {
+                        addClass(nextBtn, "nextStop")
+                    }
+                }
+                if (pageState) {
+                    pageState.innerHTML = "<span>" + (index + 1) + "</span>/" + navObjSize;
+                }
+            };// doPlay end
+
+            //初始化执行
+            doPlay();
+
+            //自动播放
+            if (autoPlay) {
+                inter = setInterval(function () {
+                    index++;
+                    doPlay();
+                }, interTime);
+            }
+
+            //点击事件
+            if (navObj) {
+                for (var i = 0; i < navObjSize; i++) {
+                    (function () {
+                        var j = i;
+                        navObj[j].addEventListener('click', function (e) {
+                            clearTimeout(timeout);
+                            clearTimeout(endTimeout);
+                            index = j;
+                            doPlay();
+                        })
+                    })()
+
                 }
             }
-        };
-
-        //触摸结束函数
-        var tEnd = function (e) {
-			if(!hasTouch){
-				conBox.removeEventListener(touchMove, tMove, false);
-				conBox.removeEventListener(touchEnd, tEnd, false);
-			}
-
-
-            if (distX == 0) return;
-            e.preventDefault();
-            if (!scrollY) {
-                if (Math.abs(distX) > slideW / 10) {
-                    distX > 0 ? index-- : index++;
-                }
-                doPlay(true);
-                if (autoPlay) {
-                    inter = setInterval(function () {
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function (e) {
+                    if (loop == true || index != navObjSize - 1) {
+                        clearTimeout(timeout);
+                        clearTimeout(endTimeout);
                         index++;
-                        doPlay()
-                    }, interTime);
-                }
+                        doPlay();
+                    }
+                })
+            }
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function (e) {
+                    if (loop == true || index != 0) {
+                        clearTimeout(timeout);
+                        clearTimeout(endTimeout);
+                        index--;
+                        doPlay();
+                    }
+                })
             }
 
-            conBox.removeEventListener(touchMove, tMove, false);
-            conBox.removeEventListener(touchEnd, tEnd, false);
-        };
 
-        if(hasTouch){
-            conBox.addEventListener(touchStart, tStart, false);
-        }
+            //触摸开始函数
+            var tStart = function (e) {
+                clearTimeout(timeout);
+                clearTimeout(endTimeout);
+                scrollY = undefined;
+                distX = 0;
+                var point = hasTouch ? e.touches[0] : e;
+                startX = point.pageX;
+                startY = point.pageY;
+
+                //添加“触摸移动”事件监听
+                conBox.addEventListener(touchMove, tMove, false);
+                //添加“触摸结束”事件监听
+                conBox.addEventListener(touchEnd, tEnd, false);
+            }
+
+            //触摸移动函数
+            var tMove = function (e) {
+                if (hasTouch) {
+                    if (e.touches.length > 1 || e.scale && e.scale !== 1) return
+                }
+                ; //多点或缩放
+
+                var point = hasTouch ? e.touches[0] : e;
+                distX = point.pageX - startX;
+                distY = point.pageY - startY;
+
+                if (typeof scrollY == 'undefined') {
+                    scrollY = !!( scrollY || Math.abs(distX) < Math.abs(distY) );
+                }
+                if (!scrollY) {
+                    e.preventDefault();
+                    if (autoPlay) {
+                        clearInterval(inter)
+                    }
+                    switch (effect) {
+                        case "left":
+                            if ((index == 0 && distX > 0) || (index >= navObjSize - 1 && distX < 0 )) {
+                                distX = distX * 0.4
+                            }
+                            translate(-index * slideW + distX, 0);
+                            break;
+                        case "leftLoop":
+                            translate(-(index + 1) * slideW + distX, 0);
+                            break;
+                    }
+
+                    if (sLoad != null && Math.abs(distX) > slideW / 3) {
+                        doSwitchLoad(distX > -0 ? -1 : 1)
+                    }
+                }
+            };
+
+            //触摸结束函数
+            var tEnd = function (e) {
+                if(!hasTouch){
+                    conBox.removeEventListener(touchMove, tMove, false);
+                    conBox.removeEventListener(touchEnd, tEnd, false);
+                }
 
 
-        function resizeHandler(){
-            var tw=panda(opts.slideCell).find(".tempWrap");
-            tw.hide();
+                if (distX == 0) return;
+                e.preventDefault();
+                if (!scrollY) {
+                    if (Math.abs(distX) > slideW / 10) {
+                        distX > 0 ? index-- : index++;
+                    }
+                    doPlay(true);
+                    if (autoPlay) {
+                        inter = setInterval(function () {
+                            index++;
+                            doPlay()
+                        }, interTime);
+                    }
+                }
 
-            setTimeout(function(){
-                var wd=$(window).width();
-                if(wd>1000)
-                    wd=1000;
+                conBox.removeEventListener(touchMove, tMove, false);
+                conBox.removeEventListener(touchEnd, tEnd, false);
+            };
 
-                tw.css("width",wd);
+            if(hasTouch){
+                conBox.addEventListener(touchStart, tStart, false);
+            }
 
-                var ultotal=0;
-                tw.find("li").each(function(element){
-                    panda(element).css("width",wd);
-                    ultotal+=wd;
-                });
 
-                tw.find("ul").css("width",ultotal);
-
-                //取最大值
-                slideW=wd;
-                doPlay();
+            function resizeHandler(){
+                var tw=panda(opts.slideCell).find(".tempWrap");
+                tw.hide();
 
                 setTimeout(function(){
-                    tw.show();
+                    var wd=$(window).width();
+                    if(wd>1000)
+                        wd=1000;
 
-                },230);
-            },300);
-        }
+                    tw.css("width",wd);
 
-      if(top && top.location.href){
-            if(top.location.href.indexOf("preview.htm")!=-1||top.location.href.indexOf("packDown.htm")!=-1){
-                setTimeout(function(){
-                    resizeHandler();
-                },1000);
-            }else{
-                    resizeHandler();
-             }
-        }
-
-        window.addEventListener(resizeStart,function(){
-            resizeHandler();
-        });
-    };
-    return PSlide;
-});
-
-panda(function (require) { 
-
-    var PSlide = require("PSlide");
-    panda("div[id=jdSlider]").each(function(element){
-        var pe=panda(element);
-       if(!pe.attr("initslide")){
-            PSlide({
-                slideCell:element,
-                titCell:".rollimage-position ul",
-                mainCell:".rollimage-img ul",
-                effect:"leftLoop",
-                autoPage:true,
-                autoPlay:true
-            });
-
-           pe.attr("initslide",true);
-       }
-    });
-});
-panda(function () {
-    var LogoElem = panda(".store-logo");
-    var logoWrap = panda(".c-logo-opts");
-    var slideElements = panda("div[id=jdSlider]");
-    var comparePosition = function (nodeA, nodeB) {
-        var positionMessage = {
-            0: "元素一致",
-            1: "节点在不同的文档",
-            2: "B 在 A 之前",
-            4: "A 在 B 之前",
-            8: "B 包含 A",
-            16: "节点 A 包含节点 B",
-            32: "浏览器的私有使用"
-        };
-
-        return nodeA.compareDocumentPosition ?
-            nodeA.compareDocumentPosition(nodeB) :
-            nodeA.contains ?
-                ( nodeA != nodeB && nodeA.contains(nodeB) && 16 ) +
-                ( nodeA != nodeB && nodeB.contains(nodeA) && 8 ) +
-                ( nodeA.sourceIndex >= 0 && nodeB.sourceIndex >= 0 ?
-                    (nodeA.sourceIndex < nodeB.sourceIndex && 4 ) +
-                    (nodeA.sourceIndex > nodeB.sourceIndex && 2 ) :
-                    1 ) :
-                0;
-    };
-
-
-    var positionStatus = true;
-    if (!slideElements.length)positionStatus = false;
-    for (var i = 0, Ln = slideElements.length; i < Ln; i++) {
-        if (comparePosition(LogoElem[0], slideElements[i]) == 2) {
-            positionStatus = true;
-            break;
-        }
-        if (comparePosition(LogoElem[0], slideElements[i]) !== 2) {
-            positionStatus = false;
-            break;
-        }
-    }
-
-    if (!positionStatus) {
-        logoWrap.css({
-            height: "3.3rem"
-        });
-        LogoElem.css({
-            top: "0.1rem"
-        })
-    } else {
-        logoWrap.css({
-            height: "3rem"
-        });
-        LogoElem.css({
-            top: "-0.75rem"
-        })
-    }
-});
-panda(function () {
-
-    var imgLazyLoad = function (arg) {
-        var images = null,
-            maxScroll = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight,
-            currentWidth = panda(window).width();
-
-        function init() {
-            if (!arg) return;
-            images = panda(arg);
-            if (!images.size()) return;
-
-            domInit();
-            eventInit();
-            check(true);
-        }
-
-        function domInit() {
-            images.each(function (item, index) {
-//				if(typeof jQuery !== "undefined"){
-//					var tempVal = item;
-//					item = index;
-//					index = tempVal;
-//				}
-                item = panda(item);
-                item.data('lly_pos', item.position()).attr('loaded', 'no');
-                var srcset = item.attr('srcset');
-                srcset = srcset ? srcset.split(/\s*,\s*/) : '';
-                item.data("lly_imgs", {});
-                if (srcset.length) {
-                    var imgs = {};
-                    for (var i = 0, len = srcset.length; i < len; i++) {
-                        var tem = [];
-                        tem = srcset[i].split(/\s+/);
-                        imgs[parseInt(tem[1], 10)] = tem[0];
-                    }
-                    item.data('lly_imgs', imgs);
-                }
-            });
-        }
-
-        function eventInit() {
-            panda(window).on('scroll', srollHandle);
-            panda(window).on('resize', resizeHandle);
-        }
-
-        function srollHandle() {
-            var pandaWin = panda(window),
-                scroll = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight;
-            if (scroll > maxScroll) {
-                maxScroll = scroll;
-                check(false);
-            }
-
-        }
-
-        function resizeHandle() {
-            var width = window.innerWidth;
-            if (width != currentWidth) {
-                currentWidth = width;
-                check(true);
-            }
-            panda(window).trigger('scroll');
-
-        }
-
-        function check(isResize) {
-            images.each(function (item, index) {
-//				if(typeof jQuery !== "undefined"){
-//					var tempVal = item;
-//					item = index;
-//					index = tempVal;
-//				}
-                item = panda(item);
-                if (!!isResize) {
-                    item.attr('loaded', 'no');
-                    var imgs = item.data('lly_imgs'),
-                        widths = [];
-                    for (var key in imgs) {
-                        widths.push(parseInt(key, 10));
-                    }
-                    widths.sort(function (a, b) {
-                        return a - b;
+                    var ultotal=0;
+                    tw.find("li").each(function(element){
+                        panda(element).css("width",wd);
+                        ultotal+=wd;
                     });
 
-                    var isHit = false;
-                    for (var i = 0, len = widths.length; i < len; i++) {
-                        if (currentWidth <= widths[i]) {
-                            item.attr('srcd', imgs[widths[i]] + '');
-                            isHit = true;
-                            break;
+                    tw.find("ul").css("width",ultotal);
+
+                    //取最大值
+                    slideW=wd;
+                    doPlay();
+
+                    setTimeout(function(){
+                        tw.show();
+
+                    },230);
+                },300);
+            }
+
+            if(top && top.location.href){
+                if(top.location.href.indexOf("preview.htm")!=-1||top.location.href.indexOf("packDown.htm")!=-1){
+                    setTimeout(function(){
+                        resizeHandler();
+                    },1000);
+                }else{
+                    resizeHandler();
+                }
+            }
+
+            window.addEventListener(resizeStart,function(){
+                resizeHandler();
+            });
+        };
+        return PSlide;
+    });
+
+    panda(function (require) {
+
+        var PSlide = require("PSlide");
+        panda("div[id=jdSlider]").each(function(element){
+            var pe=panda(element);
+            if(!pe.attr("initslide")){
+                PSlide({
+                    slideCell:element,
+                    titCell:".rollimage-position ul",
+                    mainCell:".rollimage-img ul",
+                    effect:"leftLoop",
+                    autoPage:true,
+                    autoPlay:true
+                });
+
+                pe.attr("initslide",true);
+            }
+        });
+    });
+    panda(function () {
+        var LogoElem = panda(".store-logo");
+        var logoWrap = panda(".c-logo-opts");
+        var slideElements = panda("div[id=jdSlider]");
+        var comparePosition = function (nodeA, nodeB) {
+            var positionMessage = {
+                0: "元素一致",
+                1: "节点在不同的文档",
+                2: "B 在 A 之前",
+                4: "A 在 B 之前",
+                8: "B 包含 A",
+                16: "节点 A 包含节点 B",
+                32: "浏览器的私有使用"
+            };
+
+            return nodeA.compareDocumentPosition ?
+                nodeA.compareDocumentPosition(nodeB) :
+                nodeA.contains ?
+                    ( nodeA != nodeB && nodeA.contains(nodeB) && 16 ) +
+                    ( nodeA != nodeB && nodeB.contains(nodeA) && 8 ) +
+                    ( nodeA.sourceIndex >= 0 && nodeB.sourceIndex >= 0 ?
+                        (nodeA.sourceIndex < nodeB.sourceIndex && 4 ) +
+                        (nodeA.sourceIndex > nodeB.sourceIndex && 2 ) :
+                        1 ) :
+                    0;
+        };
+
+
+        var positionStatus = true;
+        if (!slideElements.length)positionStatus = false;
+        for (var i = 0, Ln = slideElements.length; i < Ln; i++) {
+            if (comparePosition(LogoElem[0], slideElements[i]) == 2) {
+                positionStatus = true;
+                break;
+            }
+            if (comparePosition(LogoElem[0], slideElements[i]) !== 2) {
+                positionStatus = false;
+                break;
+            }
+        }
+
+        if (!positionStatus) {
+            logoWrap.css({
+                height: "3.3rem"
+            });
+            LogoElem.css({
+                top: "0.1rem"
+            })
+        } else {
+            logoWrap.css({
+                height: "3rem"
+            });
+            LogoElem.css({
+                top: "-0.75rem"
+            })
+        }
+    });
+    panda(function () {
+
+        var imgLazyLoad = function (arg) {
+            var images = null,
+                maxScroll = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight,
+                currentWidth = panda(window).width();
+
+            function init() {
+                if (!arg) return;
+                images = panda(arg);
+                if (!images.size()) return;
+
+                domInit();
+                eventInit();
+                check(true);
+            }
+
+            function domInit() {
+                images.each(function (item, index) {
+//				if(typeof jQuery !== "undefined"){
+//					var tempVal = item;
+//					item = index;
+//					index = tempVal;
+//				}
+                    item = panda(item);
+                    item.data('lly_pos', item.position()).attr('loaded', 'no');
+                    var srcset = item.attr('srcset');
+                    srcset = srcset ? srcset.split(/\s*,\s*/) : '';
+                    item.data("lly_imgs", {});
+                    if (srcset.length) {
+                        var imgs = {};
+                        for (var i = 0, len = srcset.length; i < len; i++) {
+                            var tem = [];
+                            tem = srcset[i].split(/\s+/);
+                            imgs[parseInt(tem[1], 10)] = tem[0];
+                        }
+                        item.data('lly_imgs', imgs);
+                    }
+                });
+            }
+
+            function eventInit() {
+                panda(window).on('scroll', srollHandle);
+                panda(window).on('resize', resizeHandle);
+            }
+
+            function srollHandle() {
+                var pandaWin = panda(window),
+                    scroll = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight;
+                if (scroll > maxScroll) {
+                    maxScroll = scroll;
+                    check(false);
+                }
+
+            }
+
+            function resizeHandle() {
+                var width = window.innerWidth;
+                if (width != currentWidth) {
+                    currentWidth = width;
+                    check(true);
+                }
+                panda(window).trigger('scroll');
+
+            }
+
+            function check(isResize) {
+                images.each(function (item, index) {
+//				if(typeof jQuery !== "undefined"){
+//					var tempVal = item;
+//					item = index;
+//					index = tempVal;
+//				}
+                    item = panda(item);
+                    if (!!isResize) {
+                        item.attr('loaded', 'no');
+                        var imgs = item.data('lly_imgs'),
+                            widths = [];
+                        for (var key in imgs) {
+                            widths.push(parseInt(key, 10));
+                        }
+                        widths.sort(function (a, b) {
+                            return a - b;
+                        });
+
+                        var isHit = false;
+                        for (var i = 0, len = widths.length; i < len; i++) {
+                            if (currentWidth <= widths[i]) {
+                                item.attr('srcd', imgs[widths[i]] + '');
+                                isHit = true;
+                                break;
+                            }
+                        }
+                        if (isHit === false) {
+                            item.attr('srcd', imgs[widths[widths.length - 1] + '']);
                         }
                     }
-                    if (isHit === false) {
-                        item.attr('srcd', imgs[widths[widths.length - 1] + '']);
+                    var top = item.data('lly_pos').top || item.data('lly_pos').y;
+                    if (item.attr('loaded') && top <= maxScroll + 160 && item.attr('src') !== item.attr('srcd')) {
+                        if (item.attr('srcd')) {
+                            item.attr('src', item.attr('srcd')).removeAttr('loaded');
+                        } else {
+                            item.removeAttr('loaded');
+                        }
                     }
-                }
-                var top = item.data('lly_pos').top || item.data('lly_pos').y;
-                if (item.attr('loaded') && top <= maxScroll + 160 && item.attr('src') !== item.attr('srcd')) {
-                    if (item.attr('srcd')) {
-                        item.attr('src', item.attr('srcd')).removeAttr('loaded');
-                    } else {
-                        item.removeAttr('loaded');
-                    }
-                }
-            });
-        }
+                });
+            }
 
-        init();
+            init();
 
-    };
+        };
 
-   imgLazyLoad('img[srcset]');
-    
-});
-panda(function () {
-    var mask = panda(".mask");
-    var category = panda(".c-category-list");
-    var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
-    var hasTouch = 'ontouchstart' in window && !isTouchPad;
-    var eventType = hasTouch ? "touchstart" : "click";   
-    panda(".icon-nav").unbind(eventType).bind(eventType, function () {
-        mask.css("display", "block");
-        category.addClass("category-show-1");
-        return false;
+        imgLazyLoad('img[srcset]');
+
     });
-    mask.unbind(eventType).bind(eventType, function () {
-        mask.css("display", "none");
-        category.removeClass("category-show-1");
-        return false;
-    });
-    /**
-     * 商家评分控制
-     */
-    var score = panda(".score");
-    var scoreValue = parseInt(score.find("span").html(), 10);
-    var starElements = score.find("i");
-
-    var Ln = Math.floor(scoreValue / 2);
-    for (var i = starElements.size() - 1; i >= Ln; i--) {
-        starElements.eq(i).addClass("icon-empty").removeClass("icon-full");
-    }
-
-
-    var header = panda(".category-list");
-    var categoryList = panda(".c-category-list");
-
-    header.find(".header").bind("click", function () {
-        var target = panda(this);
-        var list = target.next();
-        if (list.find("li").size() <= 0)return;
-        list.css({
-            overflow: "hidden"
+    panda(function () {
+        var mask = panda(".mask");
+        var category = panda(".c-category-list");
+        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion);
+        var hasTouch = 'ontouchstart' in window && !isTouchPad;
+        var eventType = hasTouch ? "touchstart" : "click";
+        panda(".icon-nav").unbind(eventType).bind(eventType, function () {
+            mask.css("display", "block");
+            category.addClass("category-show-1");
+            return false;
         });
-        if (target.parent().hasClass("active")) {
-            target.parent().removeClass("active");
-            list.slideUp(function () {
-                list.hide()
-            });
-        } else {
-            target.parent().addClass("active");
-            categoryList.css({
-                height: panda(window).height(),
-                overflow: "auto"
-            });
-            list.slideDown();
+        mask.unbind(eventType).bind(eventType, function () {
+            mask.css("display", "none");
+            category.removeClass("category-show-1");
+            return false;
+        });
+        /**
+         * 商家评分控制
+         */
+        var score = panda(".score");
+        var scoreValue = parseInt(score.find("span").html(), 10);
+        var starElements = score.find("i");
+
+        var Ln = Math.floor(scoreValue / 2);
+        for (var i = starElements.size() - 1; i >= Ln; i--) {
+            starElements.eq(i).addClass("icon-empty").removeClass("icon-full");
         }
-        return false;
+
+
+        var header = panda(".category-list");
+        var categoryList = panda(".c-category-list");
+
+        header.find(".header").bind("click", function () {
+            var target = panda(this);
+            var list = target.next();
+            if (list.find("li").size() <= 0)return;
+            list.css({
+                overflow: "hidden"
+            });
+            if (target.parent().hasClass("active")) {
+                target.parent().removeClass("active");
+                list.slideUp(function () {
+                    list.hide()
+                });
+            } else {
+                target.parent().addClass("active");
+                categoryList.css({
+                    height: panda(window).height(),
+                    overflow: "auto"
+                });
+                list.slideDown();
+            }
+            return false;
+        });
     });
-});
-        </script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+</script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
 </head>
 <body style=" background:#F5F5F5">
 <header>
-      <div class="tab_nav">
+    <div class="tab_nav">
         <div class="header">
-          <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
-          <div class="h-mid">
-          <form id="searchForm" name="searchForm" method="get" action="">
-          <input type='hidden' name='go' value='search'>
-	 	  <input type='hidden' name='suppId' value='92'>
-          <input type="text" name="keywords" id="keyword" class="dianp_search" placeholder="搜索本店商品" url="">
-          <input type="submit" class="icon_search" id="btsearch" value="" />
-        </form>
-          </div>
-          <div class="h-right">
-            <aside class="top_bar">
-              <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
-            </aside>
-          </div>
+            <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
+            <div class="h-mid">
+                <form id="searchForm" name="searchForm" method="get" action="">
+                    <input type='hidden' name='go' value='search'>
+                    <input type='hidden' name='suppId' value='92'>
+                    <input type="text" name="keywords" id="keyword" class="dianp_search" placeholder="搜索本店商品" url="">
+                    <input type="submit" class="icon_search" id="btsearch" value="" />
+                </form>
+            </div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
         </div>
-      </div>
-      </header>
+    </div>
+</header>
 <script type="text/javascript" src="js/mobile.js" ></script>
 <div class="goods_nav hid" id="menu">
-        <div class="Triangle">
-          <h2></h2>
-        </div>
-        <ul>
-          <li><a href=""><span class="menu1"></span><i>首页</i></a></li>
-          <li><a href=""><span class="menu2"></span><i>分类</i></a></li>
-          <li><a href=""><span class="menu3"></span><i>购物车</i></a></li>
-          <li style=" border:0;"><a href=""><span class="menu4"></span>
-              <i>我的</i></a></li>
-        </ul>
+    <div class="Triangle">
+        <h2></h2>
+    </div>
+    <ul>
+        <li><a href=""><span class="menu1"></span><i>首页</i></a></li>
+        <li><a href=""><span class="menu2"></span><i>分类</i></a></li>
+        <li><a href=""><span class="menu3"></span><i>购物车</i></a></li>
+        <li style=" border:0;"><a href=""><span class="menu4"></span>
+            <i>我的</i></a></li>
+    </ul>
 </div>
 
 
@@ -872,17 +872,27 @@ panda(function () {
         <div class="ui-flex banner-content" id="banner_box">
             <div class="cell banner-shop" id="shopInfoLink" detailflag="1">
                     <span href="javascript:;" class="shop-logo">
-													<img src="https://img30.360buyimg.com/popshop/jfs/t5761/244/9833856882/18651/3f12c6b7/598a7d1dN55fcddfe.jpg">
+													<img src="images/栋科商贸.jpg">
 						                    </span>
                 <div class="cell shop-info">
                         <span href="javascript:;" class="ui-flex shop-name">
-                            <em>回力耀广专卖店</em>
+                            <em>陕西主营产品</em>
 														                            <i class="cell a-icon"></i>
 							                        </span>
                     <span class="ui-flex shop-other">
-
-                            <em class="cell follow-num">3785人关注</em>
-                        </span>
+                        <em class="cell follow-num">主板</em>
+                        <em class="cell follow-num">微星</em>
+                        <em class="cell follow-num">三星</em>
+                    </span>
+                    <span class="ui-flex shop-other">
+                        <em class="cell follow-num">索泰</em>
+                        <em class="cell follow-num">显卡</em>
+                        <em class="cell follow-num">梦想家</em>
+                    </span>
+                    <span class="ui-flex shop-other">
+                        <em class="cell follow-num">显示器</em>
+                        <em class="cell follow-num">梦想家</em>
+                    </span>
                 </div>
             </div>
             <input id="showFollowGiftFlag" type="hidden" value="0">
@@ -898,55 +908,236 @@ panda(function () {
     </div>
 
     <ul>
-<li class="bian">
-    <a href=""><span>店铺首页</span>
-        <!--<strong>275</strong>-->
-    </a>
-</li>
-<li class="bian">
-    <a href=""><span>团购</span>
-        <!--<strong>5.0</strong>-->
-    </a>
-</li>
-<li class="bian">
-    <span>促销</span>
-    <!--<strong>5.0</strong>-->
-</li>
-<li>
-    <span>详情</span>
-    <!--<strong>5.0</strong>-->
-</li>
-</ul>
+        <li class="bian">
+            <a href=""><span>店铺首页</span>
+                <!--<strong>275</strong>-->
+            </a>
+        </li>
+        <li class="bian">
+            <a href=""><span>团购</span>
+                <!--<strong>5.0</strong>-->
+            </a>
+        </li>
+        <li class="bian">
+            <span>促销</span>
+            <!--<strong>5.0</strong>-->
+        </li>
+        <li>
+            <span>详情</span>
+            <!--<strong>5.0</strong>-->
+        </li>
+    </ul>
 </div>
+<div class="client_hot">
+    <div class="hot_title">
+        <div class="title">热门团购</div>
+        <div class="more">
+        </div>
+    </div>
+    <div class="hot_inner">
+        <div class="hot_con">
+
+        </div>
+    </div>
+</div>
+
 <section>
-    <!--<script type="text/javascript">-->
-    <!--var url = '';-->
-    <!--$(function(){-->
-    <!--$('#J_ItemList').more({'address': url});-->
-    <!--});-->
-    <!--</script>-->
-    <!--<div class="touchweb-com_searchListBox openList" id="goods_list">-->
+    <!--1F-->
     <div class="touchweb-com_searchListBox openList" id="goods_list">
 
         <form action="javascript:void(0)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
-            <div id="J_ItemList" style="opacity: 1;">
-
+            <div id="J_ItemList1" style="opacity: 1;">
                 <div class="product single_item info" id="more_element_1">
+
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+                                <img src="images/a.jpg">
+                            </div>
+                            <div class="title_box">
+                                华硕(ASUS)RX560-O4G/冰骑士版(4GB显存/128BIT位宽) </div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6810);">-</a>
+                            <input class="num" id="number_6812" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6810);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6810)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_2">
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/a.jpg">
+                            </div>
+                            <div class="title_box">
+                                华硕(ASUS)RX560-O4G/冰骑士版(4GB显存/128BIT位宽) </div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+
+
+</span>
+
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6811);">-</a>
+                            <input class="num" id="number_6813" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6811);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6811)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_3">
+
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/a.jpg">
+                            </div>
+                            <div class="title_box">
+                                华硕(ASUS)RX560-O4G/冰骑士版(4GB显存/128BIT位宽) </div>
+                            <div class="price_box">
+<span class="new_price">
+<i>￥8888.88元</i>
+<i style="font-size:10px;color: #666;">宏海科技</i>
+</span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6808);">-</a>
+                            <input class="num" id="number_6809" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6808);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6808)">
+<i class="icon-shop_cart"></i>
+</span>
+                    </li>
+                </div>
+                <div class="product single_item info" id="more_element_4">
+                    <style type="text/css">
+                        .icon-shop_cart2{
+                            background: url(images/category/shouwan.png) no-repeat center center;
+                            height: 30px;
+                            width: 40px;
+                            background-size: 30px 30px;
+                            display: block;
+                        }
+                    </style>
+                    <li>
+                        <a href="" class="item">
+                            <div class="pic_box">
+                                <div class="active_box">
+                                </div>
+
+                                <img src="images/a.jpg">
+                            </div>
+                            <div class="title_box">
+                                华硕(ASUS)RX560-O4G/冰骑士版(4GB显存/128BIT位宽) </div>
+                            <div class="price_box">
+    <span class="new_price">
+    <i>￥8888.88元</i>
+    <i style="font-size:10px;color: #666;">宏海科技</i>
+    </span>
+                            </div>
+                            <div class="comment_box">
+                                已售0</div>
+                        </a>
+                        <div class="ui-number b">
+                            <a class="decrease" onclick="goods_cut(6801);">-</a>
+                            <input class="num" id="number_6802" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                            <a class="increase" onclick="goods_add(6801);">+</a>
+                        </div>
+                        <span class="bug_car" onclick="addToCart(6801)">
+    <i class="icon-shop_cart"></i>
+    </span>
+                    </li>
+                </div>
+                <!--<div class="more_loader_spinner" style="display: none;"></div>-->
+            </div>
+        </form>
+        <script language="javascript" type="text/javascript">
+            function goods_cut($val){
+                var num_val=document.getElementById('number_'+$val);
+                var new_num=num_val.value;
+                var Num = parseInt(new_num);
+                if(Num>1)Num=Num-1;
+                num_val.value=Num;
+            }
+            function goods_add($val){
+                var num_val=document.getElementById('number_'+$val);
+                var new_num=num_val.value;
+                var Num = parseInt(new_num);
+                Num=Num+1;
+                num_val.value=Num;
+            }
+        </script>
+    </div>
+</section>
+<!------------------------------------>
+<div class="floor1">
+    <div class="floor1_title">
+        <div class="floor1_tit">
+            <div class="floor1_num">1F</div>
+            <div class="floor1_txt">华硕ATI显卡</div>
+            <div class="floor1_tag"></div>
+        </div>
+        <div class="floor1_more">
+            <a href="supplier.php?go=category&amp;suppId=21&amp;id=429">所有产品&gt;&gt;</a>
+        </div>
+    </div>
+</div>
+<!------------------------------------>
+<section>
+   <!--1F-->
+    <div class="touchweb-com_searchListBox openList" id="goods_list_1">
+
+        <form action="javascript:void(0)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY_1">
+            <div id="J_ItemList" style="opacity: 1;">
+                <div class="product single_item info" id="more_element_5">
                     <!--<style type="text/css">-->
-                        <!--.icon-shop_cart2{-->
-                            <!--/*background: url() no-repeat center center;*/-->
-                            <!--height: 30px;-->
-                            <!--width: 40px;-->
-                            <!--background-size: 30px 30px;-->
-                            <!--display: block;-->
-                        <!--}-->
+                    <!--.icon-shop_cart2{-->
+                    <!--/*background: url() no-repeat center center;*/-->
+                    <!--height: 30px;-->
+                    <!--width: 40px;-->
+                    <!--background-size: 30px 30px;-->
+                    <!--display: block;-->
+                    <!--}-->
                     <!--</style>-->
                     <li>
                         <a href="" class="item">
                             <div class="pic_box">
                                 <div class="active_box">
                                 </div>
-                                <img src="images/6805_thumb_G_1521222585064.jpg">
+                                <img src="images/b.jpg">
                             </div>
                             <div class="title_box">
                                 苹果IPhone-X手机 5.8英寸/全网通/64GB/1200万像素/平面手机 黑色</div>
@@ -969,15 +1160,15 @@ panda(function () {
 </span>
                     </li>
                 </div>
-                <div class="product single_item info" id="more_element_2">
+                <div class="product single_item info" id="more_element_6">
                     <!--<style type="text/css">-->
-                        <!--.icon-shop_cart2{-->
-                            <!--background: url(images/category/shouwan.png) no-repeat center center;-->
-                            <!--height: 30px;-->
-                            <!--width: 40px;-->
-                            <!--background-size: 30px 30px;-->
-                            <!--display: block;-->
-                        <!--}-->
+                    <!--.icon-shop_cart2{-->
+                    <!--background: url(images/category/shouwan.png) no-repeat center center;-->
+                    <!--height: 30px;-->
+                    <!--width: 40px;-->
+                    <!--background-size: 30px 30px;-->
+                    <!--display: block;-->
+                    <!--}-->
                     <!--</style>-->
                     <li>
                         <a href="" class="item">
@@ -985,7 +1176,7 @@ panda(function () {
                                 <div class="active_box">
                                 </div>
 
-                                <img src="images/6807_thumb_G_1521222600598.jpg">
+                                <img src="images/b.jpg">
                             </div>
                             <div class="title_box">
                                 苹果IPhone-X手机 5.8英寸/全网通/64GB/1200万像素/平面手机 白色</div>
@@ -1012,45 +1203,38 @@ panda(function () {
 </span>
                     </li>
                 </div>
-                <!--<div class="product single_item info" id="more_element_3"><style type="text/css">-->
-                    <!--.icon-shop_cart2{-->
-                        <!--background: url(images/category/shouwan.png) no-repeat center center;-->
-                        <!--height: 30px;-->
-                        <!--width: 40px;-->
-                        <!--background-size: 30px 30px;-->
-                        <!--display: block;-->
-                    <!--}-->
-                <!--</style>-->
-                    <li>
-                        <a href="" class="item">
-                            <div class="pic_box">
-                                <div class="active_box">
-                                </div>
+                <div class="product single_item info" id="more_element_7">
 
-                                <img src="images/6807_thumb_G_1521222600598.jpg">
+                <li>
+                    <a href="" class="item">
+                        <div class="pic_box">
+                            <div class="active_box">
                             </div>
-                            <div class="title_box">
-                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 白色</div>
-                            <div class="price_box">
+
+                            <img src="images/b.jpg">
+                        </div>
+                        <div class="title_box">
+                            苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 白色</div>
+                        <div class="price_box">
 <span class="new_price">
 <i>￥8888.88元</i>
 <i style="font-size:10px;color: #666;">宏海科技</i>
 </span>
-                            </div>
-                            <div class="comment_box">
-                                已售0</div>
-                        </a>
-                        <div class="ui-number b">
-                            <a class="decrease" onclick="goods_cut(6808);">-</a>
-                            <input class="num" id="number_6808" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
-                            <a class="increase" onclick="goods_add(6808);">+</a>
                         </div>
-                        <span class="bug_car" onclick="addToCart(6808)">
+                        <div class="comment_box">
+                            已售0</div>
+                    </a>
+                    <div class="ui-number b">
+                        <a class="decrease" onclick="goods_cut(6808);">-</a>
+                        <input class="num" id="number_6808" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
+                        <a class="increase" onclick="goods_add(6808);">+</a>
+                    </div>
+                    <span class="bug_car" onclick="addToCart(6808)">
 <i class="icon-shop_cart"></i>
 </span>
-                    </li>
-                </div>
-                <div class="product single_item info" id="more_element_4">
+                </li>
+            </div>
+                <div class="product single_item info" id="more_element_8">
                     <style type="text/css">
                         .icon-shop_cart2{
                             background: url(images/category/shouwan.png) no-repeat center center;
@@ -1066,15 +1250,15 @@ panda(function () {
                                 <div class="active_box">
                                 </div>
 
-                                <img src="images/6805_thumb_G_1521222585064.jpg">
+                                <img src="images/b.jpg">
                             </div>
                             <div class="title_box">
                                 苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 黑色</div>
                             <div class="price_box">
-<span class="new_price">
-<i>￥8888.88元</i>
-<i style="font-size:10px;color: #666;">宏海科技</i>
-</span>
+    <span class="new_price">
+    <i>￥8888.88元</i>
+    <i style="font-size:10px;color: #666;">宏海科技</i>
+    </span>
                             </div>
                             <div class="comment_box">
                                 已售0</div>
@@ -1085,152 +1269,75 @@ panda(function () {
                             <a class="increase" onclick="goods_add(6801);">+</a>
                         </div>
                         <span class="bug_car" onclick="addToCart(6801)">
-<i class="icon-shop_cart"></i>
-</span>
+    <i class="icon-shop_cart"></i>
+    </span>
                     </li>
                 </div>
-                <div class="product single_item info" id="more_element_5">
-                    <style type="text/css">
-                        .icon-shop_cart2{
-                            background: url(images/category/shouwan.png) no-repeat center center;
-                            height: 30px;
-                            width: 40px;
-                            background-size: 30px 30px;
-                            display: block;
-                        }
-                    </style>
-                    <li>
-                        <a href="" class="item">
-                            <div class="pic_box">
-                                <div class="active_box">
-                                </div>
-
-                                <img src="images/6805_thumb_G_1521222585064.jpg">
-                            </div>
-                            <div class="title_box">
-                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 黑色</div>
-                            <div class="price_box">
-<span class="new_price">
-<i>￥8888.88元</i>
-<i style="font-size:10px;color: #666;">宏海科技</i>
-</span>
-                            </div>
-                            <div class="comment_box">
-                                已售0</div>
-                        </a>
-                        <div class="ui-number b">
-                            <a class="decrease" onclick="goods_cut(6805);">-</a>
-                            <input class="num" id="number_6805" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
-                            <a class="increase" onclick="goods_add(6805);">+</a>
-                        </div>
-                        <span class="bug_car" onclick="addToCart(6805)">
-<i class="icon-shop_cart"></i>
-</span>
-                    </li>
-                </div>
-                <div class="product single_item info" id="more_element_6"><style type="text/css">
-                    .icon-shop_cart2{
-                        background: url(images/category/shouwan.png) no-repeat center center;
-                        height: 30px;
-                        width: 40px;
-                        background-size: 30px 30px;
-                        display: block;
-                    }
-                </style>
-                    <li>
-                        <a href="" class="item">
-                            <div class="pic_box">
-                                <div class="active_box">
-                                </div>
-
-                                <img src="images/6807_thumb_G_1521222600598.jpg">
-                            </div>
-                            <div class="title_box">
-                                苹果IPhone-X手机 5.8英寸/全网通/256GB/1200万像素/平面手机 白色</div>
-                            <div class="price_box">
-<span class="new_price">
-<i>￥8888.88元</i>
-<i style="font-size:10px;color: #666;">宏海科技</i>
-</span>
-                            </div>
-                            <div class="comment_box">
-                                已售0</div>
-                        </a>
-                        <div class="ui-number b">
-                            <a class="decrease" onclick="goods_cut(6807);">-</a>
-                            <input class="num" id="number_6807" type="text" onblur="changePrice();" value="1" onfocus="if(value=='1') {value=''}" size="4" maxlength="5">
-                            <a class="increase" onclick="goods_add(6807);">+</a>
-                        </div>
-                        <span class="bug_car" onclick="addToCart(6807)">
-<i class="icon-shop_cart"></i>
-</span>
-                    </li>
-                </div>
-                <div class="more_loader_spinner" style="display: none;"></div>
+            <!--<div class="more_loader_spinner" style="display: none;"></div>-->
             </div>
         </form>
-        <script language="javascript" type="text/javascript">
-            function goods_cut($val){
-                var num_val=document.getElementById('number_'+$val);
-                var new_num=num_val.value;
-                var Num = parseInt(new_num);
-                if(Num>1)Num=Num-1;
-                num_val.value=Num;
-            }
-            function goods_add($val){
-                var num_val=document.getElementById('number_'+$val);
-                var new_num=num_val.value;
-                var Num = parseInt(new_num);
-                Num=Num+1;
-                num_val.value=Num;
-            }
-        </script>
+    <script language="javascript" type="text/javascript">
+        function goods_cut($val){
+            var num_val=document.getElementById('number_'+$val);
+            var new_num=num_val.value;
+            var Num = parseInt(new_num);
+            if(Num>1)Num=Num-1;
+            num_val.value=Num;
+        }
+        function goods_add($val){
+            var num_val=document.getElementById('number_'+$val);
+            var new_num=num_val.value;
+            var Num = parseInt(new_num);
+            Num=Num+1;
+            num_val.value=Num;
+        }
+    </script>
     </div>
 </section>
 
 <script type="text/javascript">
-				TouchSlide({ 
-					slideCell:"#scrollimg",
-					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-					mainCell:".bd ul", 
-					effect:"leftLoop", 
-					autoPage:true,//自动分页
-					autoPlay:true //自动播放
-				});
-			</script>
-  
-      
-  
-     
-  
-     
- 
+    TouchSlide({
+        slideCell:"#scrollimg",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+
+
+
+
+
+
+
 <div style=" height:40px;"></div>
- <div class="bottm_nav">
- <ul>
- <li class="bian"><a href="">店铺分类</a></li>
- <li class="bian"><a href="">店铺简介</a></li>
- <li><a href="tel:">联系卖家</a></li>
- </ul>
- </div>
- 
+<div class="bottm_nav">
+    <ul>
+        <li class="bian"><a href="">店铺分类</a></li>
+        <li class="bian"><a href="">店铺简介</a></li>
+        <li><a href="tel:">联系卖家</a></li>
+    </ul>
+</div>
+
 <script>
-function goTop(){
-	$('html,body').animate({'scrollTop':0},600);
-}
+    function goTop(){
+        $('html,body').animate({'scrollTop':0},600);
+    }
 </script>
 <!--<script>-->
-       <!--$('.show_type').bind("click", function() {-->
-         <!--if ($('#goods_list').hasClass('openList')){-->
-    	<!--$('#goods_list').removeClass('openList');-->
-    	<!--$(this).removeClass('show_list');-->
-    	<!--}-->
-    	<!--else-->
-    	<!--{-->
-    	<!--$('#goods_list').addClass('openList');-->
-    	<!--$(this).addClass('show_list');-->
-    	 <!--}-->
-    <!--});-->
+<!--$('.show_type').bind("click", function() {-->
+<!--if ($('#goods_list').hasClass('openList')){-->
+<!--$('#goods_list').removeClass('openList');-->
+<!--$(this).removeClass('show_list');-->
+<!--}-->
+<!--else-->
+<!--{-->
+<!--$('#goods_list').addClass('openList');-->
+<!--$(this).addClass('show_list');-->
+<!--}-->
+<!--});-->
 <!--</script>-->
 <a href="javascript:goTop();" class="gotop"><img src="images/topup.png"></a>
 </body>
